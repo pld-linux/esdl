@@ -3,7 +3,7 @@
 Summary:	SDL and OpenGL functionality for erlang programs
 Name:		esdl
 Version:	0.96.0626
-Release:	0.1
+Release:	0.2
 License:	BSD-like
 Group:		Development/Languages
 Source0:	http://downloads.sourceforge.net/esdl/%{name}-%{version}.src.tar.gz
@@ -32,7 +32,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}/erlang/lib
 
 %{__make} install \
-	INSTALLDIR=$RPM_BUILD_ROOT%{_libdir}/erlang/lib/%{name}-%{version}
+	INSTALLDIR=$RPM_BUILD_ROOT%{_libdir}/erlang/lib/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,4 +40,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/*.html license.terms Readme
-%{_libdir}/erlang/lib/%{name}-%{version}
+%{_libdir}/erlang/lib/%{name}
